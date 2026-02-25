@@ -1,0 +1,3 @@
+[submodule "modularized_terraform"]
+	path = modularized_terraform
+	url = https://github.com/Greybash/modularized_terraform
