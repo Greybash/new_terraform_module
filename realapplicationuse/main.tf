@@ -1,10 +1,10 @@
 module "secure_vpc" {
-  source             = "../test5/"
-  name_prefix        = "secure"
-  vpc_cidr           = "10.0.0.0/16"
-  public_subnet_cidr = "10.0.1.0/24"
-  allowed_ssh_cidrs  = ["172.16.0.0/12"]
-  key_name           = "mykey"
-  public_key_path    = "./awskey.pub"
-  instance_type      = "t2.micro"
+  source             = "../modularized_terraform/"
+  name_prefix        = var.name_prefix
+  vpc_cidr           = var.vpc_cidr
+  public_subnet_cidr = var.public_subnet_cidr
+  allowed_ssh_cidrs  = var.allowed_ssh_cidrs
+  key_name           = var.key_name
+  public_key_path    = var.public_key_path
+  instance_type      = var.instance_type
 }
